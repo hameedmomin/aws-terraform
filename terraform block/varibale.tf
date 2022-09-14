@@ -10,7 +10,7 @@ variable "instances_type" {
 }
 variable "CIRD_BLOCK" {
   default = "10.0.0.0/16"
-  type    = bool
+
 }
 variable "vpcname" {
   default = "myfirstvpc"

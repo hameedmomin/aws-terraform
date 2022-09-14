@@ -10,15 +10,15 @@ resource "aws_vpc" "firstvpc" {
 }
 resource "aws_subnet" "publicsubnet" {
   vpc_id     = aws_vpc.firstvpc.id
-  cidr_block = ["10.1.0.0/24"]
+  cidr_block = ["10.0.0.0/24"]
 
   tags = {
     Name = "publicsubnet"
   }
 }
-resource "aws_subnet" "privatesubne" {
+resource "aws_subnet" "privatesubnet" {
   vpc_id     = aws_vpc.firstvpc.id
-  cidr_block = ["10.0.1.0/24"]
+  cidr_block = ["10.0.0.0/24"]
 
   tags = {
     Name = "privatesubnet"

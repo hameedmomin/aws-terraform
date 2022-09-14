@@ -13,7 +13,7 @@ terraform {
     bucket = "aws-terraform/hameed"
     key = "myterraform/tf.state"
     region = "us-east-1"
-    dynamo_db = "mytable"
+    dynamodb_table = "mytable"
   }
 }
 

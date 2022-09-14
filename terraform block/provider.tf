@@ -13,6 +13,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
+    encrypt = false
     bucket = "hameed"
     key = "myterraform/tf.state"
     region = "us-east-1"

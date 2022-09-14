@@ -8,7 +8,7 @@ terraform {
   }
 }
 provider "aws" {
-  region = var.region
+  region = "us-east-1"
 }
 
 terraform {
@@ -16,7 +16,7 @@ terraform {
     encrypt = false
     bucket = "hameed"
     key = "myterraform/tf.state"
-    region = var.region
+    region = "us-east-1"
     dynamodb_table = "mytable"
   }
 }

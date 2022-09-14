@@ -13,7 +13,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "aws-terraform/hameed"
+    bucket = "hameed"
     key = "myterraform/tf.state"
     region = "us-east-1"
     dynamodb_table = "mytable"

@@ -1,14 +1,14 @@
-/*resource "aws_spot_instance_request" "myinstances" {
+resource "aws_spot_instance_request" "myinstances" {
   ami           = "ami-0bb6af715826253bf"
   spot_price    = "0.035"
-  count         = 2
+  for_each      = toset(data.aws_availability_zones.all.names)
   instance_type = var.instances_type-map["sabbi"]
   user_data     = file("${path.module}/httpdserver.sh")
 
   tags = {
-    Name =  "${count.index}"
+    Name =  "${each.value}"
   }
-}*/
+}
 
 data "aws_availability_zones" "all" {
   filter {

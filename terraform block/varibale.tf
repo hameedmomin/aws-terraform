@@ -15,8 +15,7 @@ variable "instances_type-list" {
 }
 
 variable "CIRD_BLOCK" {
-  default = "10.0.0.0/16"
-  type    = number
+  default = ["10.0.0.0/16"]
 
 }
 variable "vpcname" {

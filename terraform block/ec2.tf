@@ -6,7 +6,7 @@ resource "aws_spot_instance_request" "myinstances" {
   user_data     = file("${path.module}/httpdserver.sh")
 
   tags = {
-    Name = element(ec2-${var.tags}, count.index)
+    Name = element(var.components, count.index)
   }
 }
 

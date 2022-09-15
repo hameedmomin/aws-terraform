@@ -22,7 +22,7 @@ variable "vpcname" {
   default = "myfirstvpc"
   type    = string
 }
-variable "tags" {
+variable "components" {
   default = ["hameed", "sabbi"]
 
 }

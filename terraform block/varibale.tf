@@ -9,10 +9,10 @@ variable "instances_type" {
   type = string
 }*/
 
-variable "instances_type-list" {
+/*variable "instances_type-list" {
   default = ["t2.micro", "t3.micro"]
   type = list(string)
-}
+}*/
 
 variable "CIRD_BLOCK" {
   default = ["10.0.0.0/16"]
@@ -25,5 +25,11 @@ variable "vpcname" {
 variable "components" {
   default = ["hameed", "sabbi"]
 
+}
+variable "instances_type-map" {
+  default = {
+    "hameed" = "t2.micro"
+     "sabbi" = "t3.micro"
+  }
 }
 #data "aws_ec2_instance_types" "" {}

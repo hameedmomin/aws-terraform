@@ -3,17 +3,25 @@ variable "region" {
   type = string
   default = "us-east-1"
 }
-
+/*
 variable "instances_type" {
   default = "t2.micro"
   type = string
+}*/
+
+variable "instances_type-list" {
+  default = ["t2.micro", "t3.micro"]
+  type = list(string)
 }
-/*variable "CIRD_BLOCK" {
+
+variable "CIRD_BLOCK" {
   default = "10.0.0.0/16"
   type    = number
 
-}*/
+}
 variable "vpcname" {
   default = "myfirstvpc"
   type    = string
 }
+
+#data "aws_ec2_instance_types" "" {}

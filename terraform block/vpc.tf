@@ -24,3 +24,5 @@ resource "aws_subnet" "privatesubnet" {
     Name = "privatesubnet"
   }
 }
+
+

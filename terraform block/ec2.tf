@@ -4,9 +4,10 @@ resource "aws_spot_instance_request" "myinstances" {
   for_each      = toset(data.aws_availability_zones.all.names)
   instance_type = var.instances_type-map["sabbi"]
   user_data     = file("${path.module}/httpdserver.sh")
+  availability_zone = each.key
 
   tags = {
-    Name =  "${each.value}"
+    Name =  "for-${each.value}"
   }
 }
 

@@ -22,5 +22,8 @@ variable "vpcname" {
   default = "myfirstvpc"
   type    = string
 }
+variable "tags" {
+  default = ["hameed", "sabbi"]
 
+}
 #data "aws_ec2_instance_types" "" {}

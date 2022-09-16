@@ -7,7 +7,7 @@ data "aws_ec2_instance_type_offerings" "visible" {
 
   filter {
     name   = "location"
-    values = ["us-eat-1"]
+    values = [each.key]
   }
 
   location_type = "availability-zone-id"

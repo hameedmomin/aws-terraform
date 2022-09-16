@@ -39,7 +39,7 @@ output "instancestype" {
 */
 
 output "instancestype1" {
-  value = [for types in data.aws_ec2_instance_type_offerings.types : types.instance_types]
+  value = toset([for types in data.aws_ec2_instance_type_offerings.types : types.instance_types])
 
 }
 

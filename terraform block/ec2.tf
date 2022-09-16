@@ -32,14 +32,12 @@ data "aws_ec2_instance_type_offerings" "types" {
   location_type = "availability-zone-id"
 }
 
-/*
 output "instancestype" {
   value = data.aws_ec2_instance_type_offerings.types.instance_types
 }
-*/
 
 output "instancestype1" {
-  value = toset([for types in data.aws_ec2_instance_type_offerings.types : types.instance_types])
+  value = toset([for t in data.aws_ec2_instance_type_offerings.types : t.instance_types])
 
 }
 

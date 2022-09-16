@@ -1,3 +1,4 @@
+/*
 resource "aws_security_group" "firstsg" {
   name        = "allow_tls"
   description = "Allow TLS inbound traffic"
@@ -23,4 +24,4 @@ resource "aws_security_group" "firstsg" {
   tags = {
     Name = "firstsg"
   }
-}
+}*/

@@ -14,6 +14,6 @@ data "aws_ec2_instance_type_offerings" "visible" {
 }
 
 output "offer" {
-  value = data.aws_ec2_instance_type_offerings.visible.instance_types
+  value = toset([for avail in data.aws_ec2_instance_type_offerings.visible: avail.locations])
 }
 

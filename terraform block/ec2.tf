@@ -1,7 +1,7 @@
 resource "aws_spot_instance_request" "myinstances" {
   ami           = "ami-0bb6af715826253bf"
   spot_price    = "0.035"
-  for_each      = toset(data.aws_ec2_instance_type_offerings.types.instance_types)
+  for_each      = toset([data.aws_ec2_instance_type_offerings.types.instance_types])
   instance_type = var.instances_type-map["sabbi"]
   user_data     = file("${path.module}/httpdserver.sh")
   availability_zone = each.key

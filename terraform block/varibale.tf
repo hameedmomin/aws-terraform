@@ -1,3 +1,10 @@
+variable "instance_type" {
+  default = "t3.micro"
+}
+
+
+
+
 #variable "region" {
 #  description = "the region where our resouces are present"
 #  type = string
@@ -33,3 +40,4 @@
 #  }
 #}
 ##data "aws_ec2_instance_types" "" {}
+

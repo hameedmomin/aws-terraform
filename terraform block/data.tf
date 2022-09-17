@@ -1,3 +1,4 @@
+/*
 data "aws_ec2_instance_type_offerings" "visible" {
   for_each = toset(["us-east-1a", "us-east-1b", "us-east-1e"])
   filter {
@@ -21,4 +22,4 @@ output "offer_1" {
   value = {
     for avail, getting in data.aws_ec2_instance_type_offerings.visible: avail => getting.instance_types
   }
-}
+}*/

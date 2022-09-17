@@ -21,6 +21,6 @@ output "offer" {
 
 output "offer_1" {
   value = {
-    for getting, offering in data.aws_ec2_instance_type_offerings.visible: getting => offering.instance_types
+    for avail, details in data.aws_ec2_instance_type_offerings.visible: avail => details.instance_types
   }
 }

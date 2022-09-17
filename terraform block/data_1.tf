@@ -24,8 +24,8 @@ output "instances-type" {
     for offering, details in data.aws_ec2_instance_type_offerings.my_types: offering => details.instance_types
   }
 }*/
-output "instances-type" {
+output "instance-type" {
   value = {
-  for offering, avail in data.aws_ec2_instance_type_offerings.my_types: offering => avail.instance_types if length(avail.instance_types) !=0
+    for getting, avail in data.aws_ec2_instance_type_offerings.my_types: getting =>avail.instance_types if length(avail.instance_types) !=0
   }
 }

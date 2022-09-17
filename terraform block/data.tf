@@ -13,11 +13,9 @@ data "aws_ec2_instance_type_offerings" "visible" {
   location_type = "availability-zone-id"
 }
 
-/*
 output "offer" {
   value = toset([for avail in data.aws_ec2_instance_type_offerings.visible: avail.locations])
 }
-*/
 
 output "offer_1" {
   value = {

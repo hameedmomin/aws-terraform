@@ -5,6 +5,7 @@ data "aws_ami" "centos8" {
 
 }
 
+/*
 output "ami" {
   value = data.aws_ami.centos8.name
-}
+}*/

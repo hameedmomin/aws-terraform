@@ -6,7 +6,7 @@ data "aws_availability_zones" "allzone" {
 }
 
 data "aws_ec2_instance_type_offerings" "my_types" {
-  for_each = toset([data.aws_availability_zones.allzone.names])
+  for_each = toset(data.aws_availability_zones.allzone.names)
   filter {
     name   = "instance-type"
     values = ["t3.micro"]

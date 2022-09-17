@@ -36,6 +36,12 @@ output "offerings" {
   for getting, avail in data.aws_ec2_instance_type_offerings.my_types : getting => avail.instance_types if length(avail.instance_types) !=0
   })
 }*/
+/*
+output "offerings" {
+  value = values({
+  for getting, avail in data.aws_ec2_instance_type_offerings.my_types : getting => avail.instance_types if length(avail.instance_types) !=0
+  })
+}*/
 output "offerings" {
   value = keys({
   for getting, avail in data.aws_ec2_instance_type_offerings.my_types : getting => avail.instance_types if length(avail.instance_types) !=0}) [3]

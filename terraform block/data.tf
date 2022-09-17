@@ -10,7 +10,7 @@ data "aws_ec2_instance_type_offerings" "visible" {
     values = [each.key]
   }
 
-  location_type = "availability-zone-id"
+  location_type = "availability-zone"
 }
 
 output "offer" {

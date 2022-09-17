@@ -1,5 +1,5 @@
 data "aws_ec2_instance_type_offerings" "visible" {
-  for_each = toset(["us-eat-1a", "us-eat-1b", "us-eat-1e"])
+  for_each = toset(["us-east-1a", "us-east-1b", "us-east-1e"])
   filter {
     name   = "instance-type"
     values = ["t3.micro"]

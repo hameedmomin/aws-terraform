@@ -5,5 +5,6 @@ terraform {
     key               = "terraform/practise/terraform.tfstate"
     region            = "us-east-1"
 
+
   }
 }

@@ -10,6 +10,7 @@ resource "aws_s3_bucket" "mybucket" {
     Environment = "Dev"
   }
 }
+
 output "bukcetname" {
   value = aws_s3_bucket.mybucket.bucket
 }

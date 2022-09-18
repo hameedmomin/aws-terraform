@@ -29,19 +29,19 @@ module "vpc" {
  #anthing tags{} ( its ablock )
 
   public_subnet_tags                             = {
-    Name                                         = "public-subnets"
+    Type                                         = "public-subnets"
   }
   private_subnet_tags                            = {
-    Name                                         = "private-subnets"
+    Type                                         = "private-subnets"
   }
   database_subnet_tags                           = {
-    Name                                         = "database-subnets"
+    Type                                         = "database-subnets"
   }
   tags                                           = {
     Owner                                        = "hameed"
   }
   vpc_tags                                       = {
-    Name                                         = "vpc-dev"
+    Type                                         = "vpc-dev"
 
   }
 

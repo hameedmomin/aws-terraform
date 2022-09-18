@@ -3,7 +3,7 @@ module "vpc" {
   version = "3.14.4"
 
   name                                          = my_vpc
-  cidr                                          = 20.0.0.0/16
+  cidr                                          = "20.0.0.0/16"
   az                                            = [ "us-eat-1a", "us-east-1b"]
   private_subnets                               = ["20.0.1.0/24", "20.0.2.0/24"]
   public_subnets                                = ["20.0.11.0/24", "20.0.12.0/24"]

@@ -12,7 +12,7 @@ module "vpc" {
   #creating DB subnets should be separatly so we have to acces it and give it in a booling
   create_database_subnet_group                  = var.create_database_subnet_group
   create_database_subnet_route_table            = var.create_database_subnet_route_table
-  database_subnets                              = ["20.0.21.0/24", "20.0.22.0/24"]
+  database_subnets                              = var.datebase_subnets
   #  create_database_nat_gateway_route             = true
   #  create_database_internet_gateway_route        = true #(deafult is false)
 

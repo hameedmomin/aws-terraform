@@ -1,3 +1,4 @@
+/*
 terraform {
   backend "s3" {
     bucket            = "hameed"
@@ -5,6 +6,6 @@ terraform {
     key               = "terraform/practise/terraform.tfstate"
     region            = "us-east-1"
 
-
   }
 }
+*/

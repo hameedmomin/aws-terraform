@@ -3,8 +3,9 @@
   key                     = "my-storage"
 }*/
 resource "aws_s3_bucket" "mybucket" {
-  bucket = "hameed"
-  force_destroy = true
+  bucket                  = "hameed"
+
+  force_destroy           = true
 
   tags = {
     Name        = "My bucket"
@@ -12,6 +13,7 @@ resource "aws_s3_bucket" "mybucket" {
   }
 }
 
+/*
 output "bukcetname" {
   value = aws_s3_bucket.mybucket.bucket
-}
+}*/

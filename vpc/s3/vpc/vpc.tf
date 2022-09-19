@@ -40,12 +40,10 @@ module "vpc" {
   database_subnet_tags                           = {
     Type                                         = "database-subnets"
   }
+/*
   tags                                           = {
     Owner                                        = "hameed"
   }
-  vpc_tags                                       = {
-    Type                                         = "vpc-dev"
-
-  }
+*/
 
 }

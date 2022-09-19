@@ -1,4 +1,3 @@
-/*
 variable "vpc-name" {
   default         = "myvpc"
   type            =  string
@@ -45,4 +44,4 @@ variable "enable_nat_gateway" {
 variable "single_nat_gateway" {
   default         = true
   type            = bool
-}*/
+}

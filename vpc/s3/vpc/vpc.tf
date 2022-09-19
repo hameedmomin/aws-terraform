@@ -28,20 +28,23 @@ module "vpc" {
   #anything tags = {} (its a arguement )
   #anthing tags{} ( its ablock )
 
+  tags                                           = local.common_tags
+  vpc_tags                                       = local.common_tags
+
   public_subnet_tags                             = {
-    Name                                         = "public-subnets"
+    Type                                         = "public-subnets"
   }
   private_subnet_tags                            = {
-    Name                                         = "private-subnets"
+    Type                                         = "private-subnets"
   }
   database_subnet_tags                           = {
-    Name                                         = "database-subnets"
+    Type                                         = "database-subnets"
   }
   tags                                           = {
     Owner                                        = "hameed"
   }
   vpc_tags                                       = {
-    Name                                         = "vpc-dev"
+    Type                                         = "vpc-dev"
 
   }
 

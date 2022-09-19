@@ -1,3 +1,4 @@
+/*
 variable "vpc-name" {
   default         = "myvpc"
   type            =  string
@@ -23,7 +24,7 @@ variable "private_subnets" {
   type             = list(string)
 }
 
-variable "datebase_subnets" {
+variable "database_subnets" {
   description      = "Range of public subnets"
   default          = ["20.0.21.0/24", "20.0.22.0/24"]
   type             = list(string)
@@ -44,4 +45,4 @@ variable "enable_nat_gateway" {
 variable "single_nat_gateway" {
   default         = true
   type            = bool
-}
+}*/

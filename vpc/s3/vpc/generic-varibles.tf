@@ -4,6 +4,6 @@ variable "region" {
 variable "environment" {
   default = "dev"
 }
-variable "bussiness" {
+variable "division" {
   default = "HR"
 }

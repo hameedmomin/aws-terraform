@@ -1,6 +1,6 @@
 locals {
-  owners         = var.bussiness
-  name           = "${var.environment}-${var.bussiness}"
+  owners         = var.division
+  name           = "${var.environment}-${var.division}"
 #  name           = "${local.bussiness}-${local.environment}"
   environment    = var.environment
 

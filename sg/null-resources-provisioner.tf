@@ -21,16 +21,16 @@ resource "null_resource" "waste" {
   provisioner "local-exec" {
     command                 = "echo VPC created on 'date' and VPC ID: ${module.vpc.vpc_id} >> creation-time-vpc-id.txt"
     working_dir             = "local-exec/"
-   # on_failure              = continue
+    on_failure              = continue
   }
 
 
 
-  # Destroy time provisioners
+/*  # Destroy time provisioners
   provisioner "local-exec" {
     command                 = "echo VPC created on 'date' and VPC ID: ${module.vpc.vpc_id} >> creation-time-vpc-id.txt"
     working_dir             = "local-exec/"
     when                    = destroy
     on_failure              = continue
-  }
+  }*/
 }

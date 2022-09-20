@@ -5,6 +5,7 @@ variable "instance_type" {
 
 
 
+
 #variable "region" {
 #  description = "the region where our resouces are present"
 #  type = string

@@ -1,12 +1,12 @@
 #For Bastion security group we needed
 output "bastion_security_group_id" {
-  value = module.public_bastion_sg.bastion_security_group_id
+  value = module.public_bastion_sg.security_group_id
 }
 output "bastion_security_group_name" {
-  value = module.public_bastion_sg.bastion_security_group_name
+  value = module.public_bastion_sg.security_group_name
 }
 output "bastion_security_group_vpc_id" {
-  value = module.public_bastion_sg.bastion_security_group_vpc_id
+  value = module.public_bastion_sg.security_group_vpc_id
 }
 
 

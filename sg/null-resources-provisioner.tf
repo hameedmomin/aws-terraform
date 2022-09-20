@@ -4,7 +4,7 @@ resource "null_resource" "waste" {
     type                    = "ssh"
     user                    = "centos"
     password                = "DevOps321"
-    host                    = aws_eip.bastion_eip.public_ip
+    host                    = "aws_eip.bastion_eip.public_ip"
     #private_key             = if we have key we have to use it
   }
   # Creation time provisioner

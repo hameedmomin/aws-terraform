@@ -1,4 +1,4 @@
-output "ec2_bastionhost_id" {
+output "ec2_bastion_id" {
   description                     = "The ID of the BastionHost"
   value                           = module.ec2_bastion.id
 }

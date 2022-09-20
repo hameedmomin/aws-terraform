@@ -1,5 +1,5 @@
 module "ec2_private" {
-  source                      = "terraform-aws-modules/ec2_bastion/aws"
+  source                      = "terraform-aws-modules/ec2-instance/aws"
   version                     = "4.1.4"
   depends_on                  = [module.vpc]
   name                        = "${var.environment}-Private"

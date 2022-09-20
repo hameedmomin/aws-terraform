@@ -2,10 +2,10 @@ resource "null_resource" "waste" {
   depends_on                = [module.ec2_bastion]
   connection {
     type                    = "ssh"
-    user                    = "centos"
+    user                    = "ec2-user"
     password                = "DevOps321"
     host                    = "aws_eip.bastion_eip.public_ip"
-    #private_key             = if we have key we have to use it
+    private_key             = file("file/justfile.txt")
   }
   # Creation time provisioner
   provisioner "file" {

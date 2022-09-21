@@ -6,7 +6,7 @@ module "ec2_private" {
   ami                         = data.aws_ami.centos8.id
   instance_type               = var.instance_type
  # subnet_id                   = module.vpc.private_subnets[0]
-  subnet_id                   = [
+  subnet_ids                   = [
     module.vpc.private_subnets[0],
     module.vpc.private_subnets[1]
   ]

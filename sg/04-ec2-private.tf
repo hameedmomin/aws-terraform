@@ -8,7 +8,7 @@ module "ec2_private" {
   subnet_id                  = module.vpc.private_subnets[0]
 #  subnet_id                   = ["module.vpc.private_subnets[0], module.vpc.private_subnets[1]"]
   count                       = var.private_instance_count
-  vpc_security_group_ids      = [module.public_bastion_sg.security_group_id]
+  vpc_security_group_ids      = [module.private_sg.security_group_id]
   tags                        = local.common_tags
   user_data                   = file("${path.module}/apache.sh")
 }

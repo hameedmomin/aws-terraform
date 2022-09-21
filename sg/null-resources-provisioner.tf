@@ -15,7 +15,7 @@ resource "null_resource" "waste" {
   # Remote_exec provisioner
   provisioner "remote-exec" {
     inline                 = [
-      "sudo chmod 400 /tmp/justfile.txt"
+      "sudo chmod 400 /tmp/justfile.pem"
     ]
   }
   provisioner "local-exec" {

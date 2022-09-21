@@ -4,7 +4,10 @@ module "classicLB" {
 
   name                            = "${local.name}-classicLoadbalancer"
 
-  subnets                         = [ module.vpc.public_subnets[0], module.vpc.public_subnets[1] ]
+  subnets                         = [
+    module.vpc.public_subnets[0],
+    module.vpc.public_subnets[1]
+  ]
   security_groups                 = module.loadbalancer_sg.security_group_id
  # internal                        = false
 

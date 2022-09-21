@@ -4,7 +4,7 @@ resource "null_resource" "waste" {
     type                    = "ssh"
     user                    = "ec2-user"
     password                = "DevOps321"
-    host                    = "aws_eip.bastion_eip.public_ip"
+    host                    = aws_eip.bastion_eip.public_ip
 #    private_key             = file("need/justfile.pem")
   }
   # Creation time provisioner

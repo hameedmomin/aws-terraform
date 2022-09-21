@@ -2,7 +2,7 @@ resource "null_resource" "waste" {
   depends_on                = [module.ec2_bastion]
   connection {
     type                    = "ssh"
-    user                    = "ec2-user"
+    user                    = "centos"
     password                = "DevOps321"
     host                    = aws_eip.bastion_eip.public_ip
 #    private_key             = file("need/justfile.pem")

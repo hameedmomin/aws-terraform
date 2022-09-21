@@ -5,11 +5,11 @@ resource "null_resource" "waste" {
     user                    = "ec2-user"
     password                = "DevOps321"
     host                    = "aws_eip.bastion_eip.public_ip"
-    private_key             = file("file/justfile.txt")
+    private_key             = file("need/justfile.txt")
   }
   # Creation time provisioner
   provisioner "file" {
-    source                 = "file/justfile.txt"
+    source                 = "need/justfile.txt"
     destination            = "/tmp/justfile.txt"
   }
   # Remote_exec provisioner

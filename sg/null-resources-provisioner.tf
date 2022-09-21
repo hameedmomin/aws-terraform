@@ -9,8 +9,8 @@ resource "null_resource" "waste" {
   }
   # Creation time provisioner
   provisioner "file" {
-    source                 = "need/justfile.txt"
-    destination            = "/tmp/justfile.txt"
+    source                 = "need/justfile.pem"
+    destination            = "/tmp/justfile.pem"
   }
   # Remote_exec provisioner
   provisioner "remote-exec" {

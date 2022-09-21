@@ -5,7 +5,7 @@ resource "null_resource" "waste" {
     user                    = "ec2-user"
     password                = "DevOps321"
     host                    = "aws_eip.bastion_eip.public_ip"
-    private_key             = file("need/justfile.txt")
+    private_key             = file("${path.module}/need/justfile.txt")
   }
   # Creation time provisioner
   provisioner "file" {

@@ -55,11 +55,23 @@ module "alb-basic" {
         timeout             = 6
         protocol            = "HTTP"
         matcher             = "200-399"
-
       }
+      targets  = {
+        my_targets_pvt1     = {
+          target_id         = module.ec2_private.id[0]
+          port              = 80
+      },
+        my_targets_pvt2     = {
+          target_id         = module.ec2_private.id[1]
+          port              = 80
+        }
+      }
+      tags                  = local.common_tags  #this is for target group tags
 
     }
 
   ]
+
+  tags                      = local.common_tags # this is for ALB
 
 }

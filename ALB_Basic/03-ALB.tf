@@ -8,7 +8,7 @@ module "alb-basic" {
     module.vpc.public_subnets[0],
     module.vpc.public_subnets[1]
   ]
-  security_group_id = [module.loadbalancer_sg.security_group_id]
+  security_groups = [module.loadbalancer_sg.security_group_id]
 
   http_tcp_listeners = [
     # Forward action is default, either when defined or undefined

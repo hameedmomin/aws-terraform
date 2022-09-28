@@ -8,10 +8,10 @@ output "ec2_bastion_public_ip" {
 }
 output "ec2_private_id" {
   description                     = "The ID of the instance"
-  value                           = module.ec2_private.id
+  value                           = ["module.ec2_private.id"]
 }
 output "ec2_private_ip" {
   description                     = "The Private IP address of the instance"
-  value                           = module.ec2_private.private_ip
+  value                           = ["module.ec2_private.private_ip"]
 }
 

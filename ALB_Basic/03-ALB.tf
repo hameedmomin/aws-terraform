@@ -58,11 +58,11 @@ module "alb-basic" {
       }
       targets  = {
         my_targets_pvt1     = {
-          target_id         = module.ec2_private.id[0]
+          target_id         = module.ec2_private.id
           port              = 80
       },
         my_targets_pvt2     = {
-          target_id         = module.ec2_private.id[1]
+          target_id         = module.ec2_private.id
           port              = 80
         }
       }

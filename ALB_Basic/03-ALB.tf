@@ -58,7 +58,7 @@ module "alb-basic" {
       }
       targets  = {
         my_targets_pvt1     = {
-          target_id         = tostring(module.ec2_private[*].id)
+          target_id         = module.ec2_private.id
           port              = 80
       },
 /*        my_targets_pvt2     = {

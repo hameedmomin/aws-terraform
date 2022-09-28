@@ -1,6 +1,6 @@
 module "ec2_private" {
   source                      = "terraform-aws-modules/ec2-instance/aws"
-  version                     = "4.1.4"
+  version                     = "2.17.0"
   depends_on                  = [module.vpc]
   name                        = "${var.environment}-Private"
   ami                         = data.aws_ami.centos8.id

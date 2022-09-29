@@ -58,13 +58,13 @@ module "alb-basic" {
       }
       targets  = {
         my_targets_pvt1     = {
-          target_id         = module.ec2_private[*].id
+          target_id         = module.ec2_private.id[0]
           port              = 80
       },
-        my_targets_pvt2     = {
+/*        my_targets_pvt2     = {
           target_id         = module.ec2_private[*].id
           port              = 80
-        }
+        }*/
       }
       tags                  = local.common_tags  #this is for target group tags
 

@@ -17,28 +17,10 @@ module "alb-basic" {
       protocol           = "HTTP"
       target_group_index = 0
       # action_type        = "forward"
-    },
-    /*    {
-      port                          = 81
-      protocol                      = "HTTP"
-      action_type                   = "redirect"
-      redirect                      = {
-        port                        = "443"
-        protocol                    = "HTTPS"
-        status_code                 = "HTTP_301"
-      }*/
-    #this means their maps inside the list of it
-    /*      port                          = 82
-      protocol                      = "HTTP"
-      action_type                   = "fixed-response"
-      fixed_response                = {
-        content_type                = "text/plain"
-        message_body                = "Fixed message"
-        status_code                 = "200"
-      }
-    }*/
+    }
   ]
   target_groups = [
+
     {
       name_prefix          = "app1-1"
       backend_protocol     = "HTTP"
@@ -56,16 +38,18 @@ module "alb-basic" {
         protocol            = "HTTP"
         matcher             = "200-399"
       }
-      targets  = {
-        my_targets_pvt1     = {
-        #  target_id         = module.ec2_private.id
-          port              = 80
-      },
-/*        my_targets_pvt2     = {
+      protocol_version = "HTTP1"
+      targets          = {
+        my_targets_pvt1 = {
+          #  target_id         = module.ec2_private.id
+          port = 80
+        },
+        /*        my_targets_pvt2     = {
           target_id         = module.ec2_private[*].id
           port              = 80
         }*/
       }
+    ]
       tags                  = local.common_tags  #this is for target group tags
 
     }

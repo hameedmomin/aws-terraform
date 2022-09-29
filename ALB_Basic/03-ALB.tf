@@ -49,11 +49,8 @@ module "alb-basic" {
           port              = 80
         }*/
       }
-    ]
-      tags                  = local.common_tags  #this is for target group tags
-
+       tags                  = local.common_tags  #this is for target group tags
     }
-
   ]
 
   tags                      = local.common_tags # this is for ALB

@@ -20,7 +20,7 @@ variable "public_subnets" {
 variable "private_subnets" {
   description = "Range of private subnets"
   default     = ["20.0.1.0/24", "20.0.2.0/24"]
-#  type        = list(string)
+  type        = list(string)
 
 }
 
